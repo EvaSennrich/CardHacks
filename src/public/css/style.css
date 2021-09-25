@@ -29,6 +29,10 @@ main {
     align-items: center;
 }
 
+.homesection h1 {
+  text-align: center;
+}
+
 .homeCardContainer {
     display: flex;
     justify-content: flex-start;
