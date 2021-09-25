@@ -12,12 +12,12 @@
 <body>
     <header></header>
     <main>
-        <div class="flashcardSection">
+        <section class="flashcardSection">
             <div class="flashcardHeading">
                 <h2>Flashcard Collections</h2>
                 <div class="flashcardBtns">
-                    <button>Create collection</button>
-                    <button>Find collection</button>
+                    <button id="showCardBox">Create collection</button>
+                    <button id="findCollection">Find collection</button>
                 </div>
             </div>
 
@@ -26,18 +26,20 @@
                 <div class="createSection">
                     <label for="question">Question</label>
                     <textarea id="question"></textarea>
+                    <br>
                     <label for="answer">Answer</label>
                     <textarea id="answer"></textarea>
                 </div>
                 <div class="createBtns">
-                    <button id="addCard">Save</button>
+                    <button id="saveCard">Save</button>
                     <button id="hideCreateBox">Close</button>
+                    <button id="saveCollection">Save Collection</button>
                 </div>
             </div>
 
             <div class="flashcardContainer">
             </div>
-        </div>
+        </section>
     </main>
     <footer></footer>
 

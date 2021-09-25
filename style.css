@@ -5,6 +5,8 @@
     font-family: sans-serif;
 }
 
+/* Flashcard styling ============================ */
+
 .flashcardHeading {
     display: flex;
     flex-direction: column;
@@ -24,7 +26,68 @@ button:hover {
     background-color: rgba(0,0,0,0.1);
 }
 
-.createCard {
-    width: 95%;
+.createCardSection {
+    display: none;
+    width: 380px;
     margin: auto;
+    padding: 20px;
+    margin-top: 10px;
+    border-radius: 5px;
+    background-color: whitesmoke;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.5);
 }
+
+.createBtns {
+    display: flex;
+    justify-content: space-around;
+}
+
+.createSection textarea {
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid lightgrey;
+}
+
+.flashcardContainer {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: auto;
+    margin-top: 10px;
+    padding: 0 10px;
+}
+
+.flashcard {
+    word-wrap: break-word;
+    width: 370px;
+    height: 200px;
+    margin: 10px;
+    background-color: white;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.5);
+}
+
+.flashcard p {
+    display: none;
+}
+
+.showDisplay {
+    display: block;
+}
+
+@media(max-width:600px) {
+    .flashcard {
+        margin: 10px auto;
+    }
+}
+
+/* @media(min-width:600px) {
+    .flashcard {
+        margin: 10px auto;
+    }
+} */
+
+
+ /* =========================================  */
+
