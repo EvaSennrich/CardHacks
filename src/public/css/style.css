@@ -16,6 +16,7 @@ button {
     outline: none;
     cursor: pointer;
     border: 1px solid lightgrey;
+    box-shadow: 5px 10px;;
     border-radius: 5px;
     background-color: #fff;
 }
@@ -27,4 +28,9 @@ button:hover {
 .createCard {
     width: 95%;
     margin: auto;
+}
+
+.WelcomeTitle {
+    text-align: center;
+    background-color: blueviolet;
 }
