@@ -107,7 +107,7 @@ button:hover {
   color: white;
   text-align: center;
   line-height: 70px;
-  background: #340363;
+  background: #29024e;
   user-select: none;
 }
 
@@ -141,21 +141,21 @@ label #barbtn,
 label #cancel {
   position: absolute;
   cursor: pointer;
-  background: #262626;
+  background: #29024e;
   color: white;
   border-radius: 5px;
-  border:  1px solid #262626;
+  border:  1px solid white;
   font-size: 29px;
   height: 45px;
   width: 45px;
   text-align: center;
-  line-height: 45px;
+  line-height: 40px;
   transition: all 0.5s ease;
 }
 
 label #barbtn {
-  left: 40px;
-  top: 25px;
+  left: 10px;
+  top: 15px;
   font-size: 35px;
   color: white;
   padding-left: 6px 12px;
@@ -168,26 +168,33 @@ label #cancel {
   font-size: 30px;
   color: white;
   padding: 4px 9px;
+  opacity: 0;
+  visibility: hidden;
+}
+
+#check:checked ~ .sidebar{
+  left: 0;
+}
+#check:checked ~ label #barbtn{
+  margin-left: 245px;
+  opacity: 0;
+  visibility: hidden;
+}
+#check:checked ~ label #cancel{
+  margin-left: .3px;
+  opacity: 1;
+  visibility: visible;
 }
 
 #check {
   display: none;
-
 }
 
 #check:checked ~ .sidebar {
   left: 0;
 }
 
-a:hover {
-  border-left: 5px solid #42c1c5;
-  text-transform: uppercase;
-}
 
-.sidebar a i {
-  font-size:  23px;
-  margin-right: 16px;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-}
+
+
 
