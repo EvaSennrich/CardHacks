@@ -16,63 +16,58 @@
     </header>
     <main>
         <p id="front">
-            <!-- term lives here   -->
-          </p><br>
-          <hr><br>
-          <div id="back">
-            <!-- definition lives here   -->
-          </div><br>
-          <div class="d-flex justify-content-around">
-            <div id ="activeCardButtons">
-                <button id="prev" onclick="prevCard()" style="margin-left: 5%;">Previous Card</button>
-                <button id="flip" type="button" value="Flip" onclick="flash()">Flip</button>
-                <button id="next" onclick="nextCard()" style="margin-right: 5%;">Next Card</button>
-              </div>
-          </div>
-
-          <br>
-          <br>
-          <br>
-          <div id="formContainer">
-            <form id="cardForm">
-              <input id="newTerm" type="text" placeholder="Add your own term or concept..." onKeyDown="if(event.keyCode==13) document.getElementById('newDef').focus()">
-              <input id="newDef" type="text" placeholder="...give it a definition, then click the button to..." onKeyDown="if(event.keyCode==13) cardAdd()">
-              <br>
-              <input id="submit" type="button" value="add it to the deck!" onClick="cardAdd()">
-              <br>
-              <input id="clearDeck" type="button" value="Click HERE to clear the deck!" onClick="emptyDeck()">
-            </form>
-            <br>
-          </div>
-        <select id="selectCards" style="display:none;">
-        
-        </select>
-          <div id="importExport">
-            
-              <div id="import"> 
-                  <h2 style="text-align:center;">Import</h2>
-                  <p>choose a local file containing a <code>.json</code> array of cards, and then click below!</p>
-                  <input id="uploadDeck" type="file"></input>
-              <button id="deckSubmit" onclick="upload_deck()">Choose a File and Click Here</button>
-              
-            </div>
-            
-            <div id="export"> 
-                 <a class="close" id="close" onclick="slideOut()"></a>
-                <h2 style="text-align:center;color:white;">Export</h2>
-                <p style="color:white;">Click below to save a local <code>.json</code> file containing the current deck.</p>
-                
-                <button id="saveDeck" onclick="download_deck()">Save this Deck?</button>
+          <!-- term lives here   -->
+        </p><br>
+        <hr><br>
+        <div id="back">
+          <!-- definition lives here   -->
+        </div><br>
+        <div id ="activeCardButtons">
+          <button id="prev" onclick="prevCard()">Previous Card
+        </button>
+        <button id="flip" type="button" value="Flip" onclick="flash()">
+        Flip</button>
+        <button id="next" onclick="nextCard()">Next Card
+        </button>
         </div>
-        
-    </main>
+        <br>
+        <br>
+        <br>
+        <div id="formContainer">
+          <form id="cardForm">
+            <input id="newTerm" type="text" placeholder="Add your own term or concept..." onKeyDown="if(event.keyCode==13) document.getElementById('newDef').focus()">
+            <input id="newDef" type="text" placeholder="...give it a definition, then click the button to..." onKeyDown="if(event.keyCode==13) cardAdd()">
+            <br>
+            <input id="submit" type="button" value="add it to the deck!" onClick="cardAdd()">
+            <br>
+            <input id="clearDeck" type="button" value="Click HERE to clear the deck!" onClick="emptyDeck()">
+          </form>
+          <br>
+        </div>
+      <select id="selectCards" style="display:none;">
+      
+      </select>
+        <div id="importExport">
+          
+            <div id="import"> 
+                <h2 style="text-align:center;">Import</h2>
+                <p>choose a local file containing a <code>.json</code> array of cards, and then click below!</p>
+                <input id="uploadDeck" type="file"></input>
+            <button id="deckSubmit" onclick="upload_deck()">Choose a File and Click Here</button>
+            
+          </div>
+          
+          <div id="export"> 
+               <a class="close" id="close" onclick="slideOut()"></a>
+              <h2 style="text-align:center;color:white;">Export</h2>
+              <p style="color:white;">Click below to save a local <code>.json</code> file containing the current deck.</p>
+              
+              <button id="saveDeck" onclick="download_deck()">Save this Deck?</button>
+            </div>
+       
+        </div>
+            <script type="text/javascript" src="public/js/main.js"></script>
 
-
-    <footer></footer>
-
-
-
-    <script src="main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
 </body>
 
