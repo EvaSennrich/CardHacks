@@ -21,6 +21,7 @@ const flashcardMaker = (text) => {
     const correct = document.createElement('button');
     const incorrect = document.createElement('button');
 
+
     close.innerHTML = 'X';
     close.onclick = () => {
         div.remove();
@@ -63,7 +64,23 @@ const flashcardMaker = (text) => {
     div.appendChild(reply);
 
     flashcardContainer.appendChild(div);
+
+    var correctAnswerCounter = document.getElementById("correctAnswers"),
+      Ccount = 0;
+    correct.onclick = function() {
+      Ccount += 1;
+      correctAnswerCounter.innerHTML = + Ccount;
+  }
+
+  var incorrectAnswerCounter = document.getElementById("incorrectAnswers"),
+    Icount = 0;
+  incorrect.onclick = function() {
+    Icount += 1;
+    incorrectAnswerCounter.innerHTML = + Icount;
 }
+}
+
+
 
 const addFlashcard = () => {
     let flashcardInfo = {
@@ -92,4 +109,6 @@ showCardBox.addEventListener('click', () => {
     createCardSection.style.display = "block";
 })
 
-cardsArr.forEach(flashcardMaker);
+
+
+
