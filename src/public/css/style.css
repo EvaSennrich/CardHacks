@@ -13,6 +13,14 @@ main {
   margin: 0 15%;
 }
 
+.page {
+	display :none;
+}
+
+.page.show {
+	display : block;
+}
+
 /* Home section ============================== */
 
 .homesection {
@@ -44,6 +52,10 @@ main {
 /* =========================================== */
 
 /* Flashcard styling ========================= */
+
+.flashhcardSection {
+  flex-direction: column;
+}
 
 .flashcardHeading {
     display: flex;
@@ -136,11 +148,11 @@ button:hover {
   left: -240px;
   width: 240px;
   height: 100%;
-  background-color: #4d0ad6;
+  background-color: #54086d;
   transition: all 0.5s ease;
 }
 
-.sidebar header {
+.sidebar h2 {
   font-size: 25px;
   color: white;
   text-align: center;
@@ -192,20 +204,20 @@ label #cancel {
 }
 
 label #barbtn {
-  left: 10px;
-  top: 15px;
-  font-size: 35px;
+  left: 15px;
+  top: 5px;
+  font-size: 25px;
   color: white;
   padding-left: 6px 12px;
 }
 
 label #cancel {
-  z-index: 1111;
-  left: 195px;
-  top: 17px;
-  font-size: 30px;
+  z-index: 1105;
+  left: 185px;
+  top: 15px;
+  font-size: 25px;
   color: white;
-  padding: 4px 9px;
+  padding: 4px 5px;
   opacity: 0;
   visibility: hidden;
 }

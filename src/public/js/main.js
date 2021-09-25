@@ -66,18 +66,18 @@ const flashcardMaker = (text) => {
     flashcardContainer.appendChild(div);
 
     var correctAnswerCounter = document.getElementById("correctAnswers"),
-      Ccount = 0;
-    correct.onclick = function() {
-      Ccount += 1;
-      correctAnswerCounter.innerHTML = + Ccount;
-  }
+        Ccount = 0;
+    correct.onclick = function () {
+        Ccount += 1;
+        correctAnswerCounter.innerHTML = + Ccount;
+    }
 
-  var incorrectAnswerCounter = document.getElementById("incorrectAnswers"),
-    Icount = 0;
-  incorrect.onclick = function() {
-    Icount += 1;
-    incorrectAnswerCounter.innerHTML = + Icount;
-}
+    var incorrectAnswerCounter = document.getElementById("incorrectAnswers"),
+        Icount = 0;
+    incorrect.onclick = function () {
+        Icount += 1;
+        incorrectAnswerCounter.innerHTML = + Icount;
+    }
 }
 
 
@@ -109,6 +109,30 @@ showCardBox.addEventListener('click', () => {
     createCardSection.style.display = "block";
 })
 
+// Page navigation 
+const homeBtn = document.querySelector("#homeBtn");
+if (homeBtn) {
+    homeBtn.addEventListener("click", (event) => {
+        document.querySelectorAll(".page").forEach((page) => page.classList.remove("show"));
+        document.querySelector("#homesect").classList.add("show")
+    })
+}
+
+const flashcardBtn = document.querySelector("#flashcardBtn");
+if (flashcardBtn) {
+    flashcardBtn.addEventListener("click", (event) => {
+        document.querySelectorAll(".page").forEach((page) => page.classList.remove("show"));
+        document.querySelector("#flashcardSect").classList.add("show")
+    })
+}
+
+const scoreboardBtn = document.querySelector("#scoreboardBtn");
+if (scoreboardBtn) {
+    scoreboardBtn.addEventListener("click", (event) => {
+        document.querySelectorAll(".page").forEach((page) => page.classList.remove("show"));
+        document.querySelector("#scoreboardSect").classList.add("show")
+    })
+}
 
 
 
