@@ -90,3 +90,77 @@ button:hover {
 
 
  /* =========================================  */
+
+/* sidebar styling */
+
+.sidebar {
+  position: fixed;
+  left: -250px;
+  width: 250px;
+  height: 100%;
+  background-color: #4d0ad6;
+}
+
+.sidebar header {
+  font-size: 25px;
+  color: white;
+  text-align: center;
+  line-height: 70px;
+  background: #340363;
+  user-select: none;
+}
+
+.sidebar ul a {
+  display: block;
+  height: 100%;
+  width: 100%;
+  line-height: 80px;
+  font-size: 20px;
+  color: white;
+  padding-left: 40px;
+  box-sizing: border-box;
+  border-top: 1.5px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1.5px solid black;
+  transition: 0.4s;
+}
+
+ul li:hover a {
+  padding-left: 50px;
+}
+
+.sidebar ul a i {
+  margin-right: 16px;
+}
+
+#check {
+  display: none;
+}
+
+label #barbtn,
+label #cancel {
+  position: absolute;
+  cursor: pointer;
+  background: #042331;
+  border-radius: 2px;
+}
+
+label #barbtn {
+  left: 40px;
+  top: 25px;
+  font-size: 35px;
+  color: white;
+  padding-left: 6px 12px;
+}
+
+label #cancel {
+  z-index: 1111;
+  left: 195px;
+  top: 17px;
+  font-size: 30px;
+  color: #0a5275;
+  padding: 4px 9px;
+}
+
+#check:checked ~ .sidebar {
+  left: 0;
+}
