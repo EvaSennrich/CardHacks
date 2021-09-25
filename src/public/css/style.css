@@ -95,10 +95,11 @@ button:hover {
 
 .sidebar {
   position: fixed;
-  left: -250px;
-  width: 250px;
+  left: -240px;
+  width: 240px;
   height: 100%;
   background-color: #4d0ad6;
+  transition: all 0.5s ease;
 }
 
 .sidebar header {
@@ -112,7 +113,7 @@ button:hover {
 
 .sidebar ul a {
   display: block;
-  height: 100%;
+  height: 65%;
   width: 100%;
   line-height: 80px;
   font-size: 20px;
@@ -121,7 +122,7 @@ button:hover {
   box-sizing: border-box;
   border-top: 1.5px solid rgba(255, 255, 255, 0.1);
   border-bottom: 1.5px solid black;
-  transition: 0.4s;
+  transition: all 0.4s ease;
 }
 
 ul li:hover a {
@@ -140,8 +141,16 @@ label #barbtn,
 label #cancel {
   position: absolute;
   cursor: pointer;
-  background: #042331;
-  border-radius: 2px;
+  background: #262626;
+  color: white;
+  border-radius: 5px;
+  border:  1px solid #262626;
+  font-size: 29px;
+  height: 45px;
+  width: 45px;
+  text-align: center;
+  line-height: 45px;
+  transition: all 0.5s ease;
 }
 
 label #barbtn {
@@ -157,10 +166,28 @@ label #cancel {
   left: 195px;
   top: 17px;
   font-size: 30px;
-  color: #0a5275;
+  color: white;
   padding: 4px 9px;
+}
+
+#check {
+  display: none;
+
 }
 
 #check:checked ~ .sidebar {
   left: 0;
 }
+
+a:hover {
+  border-left: 5px solid #42c1c5;
+  text-transform: uppercase;
+}
+
+.sidebar a i {
+  font-size:  23px;
+  margin-right: 16px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
