@@ -228,7 +228,38 @@ label #cancel {
   left: 0;
 }
 
+/* =========================================  */
 
+/* Scoreboard section ======================== */
 
+.scoreboardSection h2 {
+  text-align: center;
+}
 
+.scoreTable {
+  border-collapse: collapse;
+  width: 100%;
+}
 
+.scoreTable td, .scoreTable th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.scoreTable tr:nth-child(even){
+  background-color: #f2f2f2;
+}
+
+.scoreTable tr:hover {
+  background-color: #ddd;
+}
+
+.scoreTable th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #54086d;
+  color: white;
+}
+
+/* =========================================  */
