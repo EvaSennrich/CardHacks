@@ -2,30 +2,31 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="src/public/css/style.css">
-    <script src="https://www.gstatic.com/firebase.js/8.2.7/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebase.js/8.2.7/firebase-auth.js"></script>
-    <title>CardHacks</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="src/public/css/style.css">
+  <script src="https://www.gstatic.com/firebase.js/8.2.7/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebase.js/8.2.7/firebase-auth.js"></script>
+  <title>CardHacks</title>
 </head>
 
 <body>
   <!-- sidebar -->
-  <input type="checkbox" id="check" />
+  <header>
+    <input type="checkbox" id="check" />
     <label for="check">
       <i class="fas fa-bars" id="barbtn"></i>
       <i class="fas fa-times" id="cancel"></i>
     </label>
     <div class="sidebar">
-      <header>Menu</header>
+      <h2>Menu</h2>
       <ul>
         <li>
           <a href="#"><i class="fas fa-home"></i>Home</a>
         </li>
         <li>
-            <a href="src\login.html"><i class="fas fa-home"></i>Login</a>
+          <a href="src\login.html"><i class="fas fa-home"></i>Login</a>
         </li>
         <li>
           <a href="#"><i class="fas fa-sticky-note"></i>Flashcards</a>
@@ -37,51 +38,68 @@
           <a href="#"><i class="fas fa-cogs"></i>Settings</a>
         </li>
         <li style="text-align: center; margin-top: 5%;">
-            <button onclick="signOut()" id="signOut">SignOut</button>
+          <button onclick="signOut()" id="signOut">SignOut</button>
         </li>
       </ul>
     </div>
+  </header>
 
+  <main>
+    <!-- Home -->
+    <section class="homesection" id="homesect">
+      <h1>Welcome User</h1>
+      <div class="homeCards">
+        <a href=""></a>
+      </div>
+      <div class="homeCards">
+        <a href=""></a>
+      </div>
+    </section>
 
-    <header></header>
-    <main>
-        <section class="flashcardSection">
-            <div class="flashcardHeading">
-                <h2>Flashcard Collections</h2>
-                <div class="flashcardBtns">
-                    <button id="showCardBox">Create collection</button>
-                    <button id="findCollection">Find collection</button>
-                </div>
-            </div>
-            <div class="scoreboard" style="text-align: center;">
-                <p>Correct: <a id="correctAnswers">0</a></p>
-                <p>Incorrect: <a id="incorrectAnswers">0</a></p>
-            </div>
+    <!-- Flashcards -->
+    <section class="flashcardSection" id="flashcardSect">
+      <div class="flashcardHeading">
+        <h2>Flashcard Collections</h2>
+        <div class="flashcardBtns">
+          <button id="showCardBox">Create collection</button>
+          <button id="findCollection">Find collection</button>
+        </div>
+      </div>
+      <div class="scoreboard" style="text-align: center;">
+        <p>Correct: <a id="correctAnswers">0</a></p>
+        <p>Incorrect: <a id="incorrectAnswers">0</a></p>
+      </div>
 
-            <div class="createCardSection">
-                <h3>Create Flashcard</h3>
-                <div class="createSection">
-                    <label for="question">Question</label>
-                    <textarea id="question"></textarea>
-                    <br>
-                    <label for="answer">Answer</label>
-                    <textarea id="answer"></textarea>
-                </div>
-                <div class="createBtns">
-                    <button id="saveCard">Save</button>
-                    <button id="hideCreateBox">Close</button>
-                    <button id="saveCollection">Save Collection</button>
-                </div>
-            </div>
+      <div class="createCardSection">
+        <h3>Create Flashcard</h3>
+        <div class="createSection">
+          <label for="question">Question</label>
+          <textarea id="question"></textarea>
+          <br>
+          <label for="answer">Answer</label>
+          <textarea id="answer"></textarea>
+        </div>
+        <div class="createBtns">
+          <button id="saveCard">Save</button>
+          <button id="hideCreateBox">Close</button>
+          <button id="saveCollection">Save Collection</button>
+        </div>
+      </div>
 
-            <div class="flashcardContainer">
-            </div>
-        </section>
-    </main>
-    <footer></footer>
+      <div class="flashcardContainer">
+      </div>
+    </section>
 
-    <script src="src/public/js/main.js"></script>
-    <script src="https://kit.fontawesome.com/863e419f08.js" crossorigin="anonymous"></script>
+    <!-- Scoreboard -->
+    <section class="scoreboardSection" id="scoreboardSect">
+
+    </section>
+
+  </main>
+  <footer></footer>
+
+  <script src="src/public/js/main.js"></script>
+  <script src="https://kit.fontawesome.com/863e419f08.js" crossorigin="anonymous"></script>
 </body>
 
 </html>
