@@ -5,7 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="public/css/style.css">
+    <link rel="stylesheet" href="src/public/css/style.css">
+    <script src="https://www.gstatic.com/firebase.js/8.2.7/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebase.js/8.2.7/firebase-auth.js"></script>
     <title>CardHacks</title>
 </head>
 
@@ -23,6 +25,9 @@
           <a href="#"><i class="fas fa-home"></i>Home</a>
         </li>
         <li>
+            <a href="src\login.html"><i class="fas fa-home"></i>Login</a>
+        </li>
+        <li>
           <a href="#"><i class="fas fa-sticky-note"></i>Flashcards</a>
         </li>
         <li>
@@ -30,6 +35,9 @@
         </li>
         <li>
           <a href="#"><i class="fas fa-cogs"></i>Settings</a>
+        </li>
+        <li style="text-align: center; margin-top: 5%;">
+            <button onclick="signOut()" id="signOut">SignOut</button>
         </li>
       </ul>
     </div>
@@ -45,7 +53,7 @@
                     <button id="findCollection">Find collection</button>
                 </div>
             </div>
-            <div class = "scoreboard">
+            <div class="scoreboard" style="text-align: center;">
                 <p>Correct: <a id="correctAnswers">0</a></p>
                 <p>Incorrect: <a id="incorrectAnswers">0</a></p>
             </div>
@@ -72,7 +80,7 @@
     </main>
     <footer></footer>
 
-    <script src="public/js/main.js"></script>
+    <script src="src/public/js/main.js"></script>
     <script src="https://kit.fontawesome.com/863e419f08.js" crossorigin="anonymous"></script>
 </body>
 
