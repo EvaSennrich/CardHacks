@@ -5,70 +5,45 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="public/css/style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="stylesheet" href="public/css/style.css">
     <title>CardHacks</title>
 </head>
 
 <body>
-    <header>
-        <h1 class="WelcomeTitle">Welcome To CardHacks</h1>
-    </header>
+    <header></header>
     <main>
-        <p id="front">
-          <!-- term lives here   -->
-        </p><br>
-        <hr><br>
-        <div id="back">
-          <!-- definition lives here   -->
-        </div><br>
-        <div id ="activeCardButtons">
-          <button id="prev" onclick="prevCard()">Previous Card
-        </button>
-        <button id="flip" type="button" value="Flip" onclick="flash()">
-        Flip</button>
-        <button id="next" onclick="nextCard()">Next Card
-        </button>
-        </div>
-        <br>
-        <br>
-        <br>
-        <div id="formContainer">
-          <form id="cardForm">
-            <input id="newTerm" type="text" placeholder="Add your own term or concept..." onKeyDown="if(event.keyCode==13) document.getElementById('newDef').focus()">
-            <input id="newDef" type="text" placeholder="...give it a definition, then click the button to..." onKeyDown="if(event.keyCode==13) cardAdd()">
-            <br>
-            <input id="submit" type="button" value="add it to the deck!" onClick="cardAdd()">
-            <br>
-            <input id="clearDeck" type="button" value="Click HERE to clear the deck!" onClick="emptyDeck()">
-          </form>
-          <br>
-        </div>
-      <select id="selectCards" style="display:none;">
-      
-      </select>
-        <div id="importExport">
-          
-            <div id="import"> 
-                <h2 style="text-align:center;">Import</h2>
-                <p>choose a local file containing a <code>.json</code> array of cards, and then click below!</p>
-                <input id="uploadDeck" type="file"></input>
-            <button id="deckSubmit" onclick="upload_deck()">Choose a File and Click Here</button>
-            
-          </div>
-          
-          <div id="export"> 
-               <a class="close" id="close" onclick="slideOut()"></a>
-              <h2 style="text-align:center;color:white;">Export</h2>
-              <p style="color:white;">Click below to save a local <code>.json</code> file containing the current deck.</p>
-              
-              <button id="saveDeck" onclick="download_deck()">Save this Deck?</button>
+        <section class="flashcardSection">
+            <div class="flashcardHeading">
+                <h2>Flashcard Collections</h2>
+                <div class="flashcardBtns">
+                    <button id="showCardBox">Create collection</button>
+                    <button id="findCollection">Find collection</button>
+                </div>
             </div>
-       
-        </div>
-            <script type="text/javascript" src="public/js/main.js"></script>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+            <div class="createCardSection">
+                <h3>Create Flashcard</h3>
+                <div class="createSection">
+                    <label for="question">Question</label>
+                    <textarea id="question"></textarea>
+                    <br>
+                    <label for="answer">Answer</label>
+                    <textarea id="answer"></textarea>
+                </div>
+                <div class="createBtns">
+                    <button id="saveCard">Save</button>
+                    <button id="hideCreateBox">Close</button>
+                    <button id="saveCollection">Save Collection</button>
+                </div>
+            </div>
+
+            <div class="flashcardContainer">
+            </div>
+        </section>
+    </main>
+    <footer></footer>
+
+    <script src="public/js/main.js"></script>
 </body>
 
 </html>
