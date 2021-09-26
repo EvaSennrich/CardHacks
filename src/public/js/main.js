@@ -26,7 +26,7 @@ const flashcardMaker = (text) => {
     div.remove();
   };
 
-  show.innerHTML = "Toggle answer";
+  show.innerHTML = "show answer answer";
   show.addEventListener("click", () => {
     // p.classList.toggle("showDisplay");
     if (p.style.display === "none") {

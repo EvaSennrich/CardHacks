@@ -36,9 +36,6 @@
           <li>
             <a href="#"><i class="fas fa-cogs"></i>Settings</a>
           </li>
-          <li style="text-align: center; margin-top: 5%">
-            <button class="signoutbtn" onclick="signOut()" id="signOut">Sign Out</button>
-          </li>
         </ul>
       </div>
     </header>
@@ -46,8 +43,8 @@
     <main>
       <!-- Home -->
       <section class="homesection page" id="homesect">
-        <h1>Flashcards</h1>
-        <div class="homeCardContainer">
+        <h1 style="text-align: center;">Welcome to CardHacks!</h1>
+        <div class="homeCardContainer" style="margin-left: 8%;">
           <a href="">
             <div class="homeCards">
               <p>Learn Through Flashcards</p>
@@ -55,7 +52,7 @@
           </a>
           <a href="#">
             <div class="homeCards">
-              <p>Watch Your Performance On The Scoreboard</p>
+              <p>Watch Your Performance On The Scoreboard & compete against your friends</p>
             </div>
           </a>
         </div>
@@ -66,13 +63,13 @@
         <div class="flashcardHeading">
           <h2>Flashcard Collections</h2>
           <div class="flashcardBtns">
-            <button id="showCardBox">Create collection</button>
-            <button id="findCollection">Find collection</button>
+            <button id="showCardBox" style="background-color: #54086d; color: white;">Create collection</button>
+            <button id="findCollection" style="background-color: #54086d; color: white;">Find collection</button>
           </div>
         </div>
-        <div class="scoreboard" style="text-align: center">
-          <p>Correct: <a id="correctAnswers">0</a></p>
-          <p>Incorrect: <a id="incorrectAnswers">0</a></p>
+        <div class="scoreboard" style="text-align: center; margin-top: 1%; border: 1px;">
+          <p><b>Correct:</b> <a id="correctAnswers">0</a></p>
+          <p><b>Incorrect:</b> <a id="incorrectAnswers">0</a></p>
         </div>
 
         <div class="createCardSection">
@@ -99,35 +96,35 @@
         <h2>Scoreboard</h2>
         <table class="scoreTable">
           <tr>
-            <th>Ranks</th>
+            <th>Rank</th>
             <th>Name</th>
             <th>Correct</th>
             <th>Incorrect</th>
-            <th>No. of cards</th>
+            <th>% Correct</th>
           </tr>
 
           <tr>
-            <td>Ranks</td>
-            <td>Name</td>
-            <td>Correct</td>
-            <td>Incorrect</td>
-            <td>No. of cards</td>
+            <td>1</td>
+            <td>Jim Hendricks</td>
+            <td>45</td>
+            <td>5</td>
+            <td>90%</td>
           </tr>
 
           <tr>
-            <td>Ranks</td>
-            <td>Name</td>
-            <td>Correct</td>
-            <td>Incorrect</td>
-            <td>No. of cards</td>
+            <td>2</td>
+            <td>Billy Nelson</td>
+            <td>30</td>
+            <td>20</td>
+            <td>60%</td>
           </tr>
 
           <tr>
-            <td>Ranks</td>
-            <td>Name</td>
-            <td>Correct</td>
-            <td>Incorrect</td>
-            <td>No. of cards</td>
+            <td>3</td>
+            <td>Bob Mars</td>
+            <td>17</td>
+            <td>33</td>
+            <td>34%</td>
           </tr>
         </table>
       </section>

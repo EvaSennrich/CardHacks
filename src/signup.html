@@ -13,15 +13,58 @@
 </head>
 
 <body>
-
-    <div class="formContainer">
-        <h1>Enter Credentials Here:</h1>
-        <input type="email" placeholder="email here" id="email"><br>
-        <input type="password" placeholder="password here" id="password"><br>
-        <button onclick="signUp()" id="signUp">SignUp</button>
+  <header>
+    <input type="checkbox" id="check" />
+    <label for="check">
+      <i class="fas fa-bars" id="barbtn"></i>
+      <i class="fas fa-times" id="cancel"></i>
+    </label>
+    <div class="sidebar">
+      <h2>Menu</h2>
+      <ul>
+        <li>
+          <a href="../index.html" id="homeBtn"><i class="fas fa-home"></i>Home</a>
+        </li>
+        <li>
+          <a href="#" id="flashcardBtn"><i class="fas fa-sticky-note"></i>Flashcards</a>
+        </li>
+        <li>
+          <a href="#" id="scoreboardBtn"><i class="fas fa-star"></i>Scoreboard</a>
+        </li>
+        <li>
+          <a href="#"><i class="fas fa-cogs"></i>Settings</a>
+        </li>
+      </ul>
     </div>
+  </header>
+
+  <form class="form" action="" method="post">
+    <h1 class="login-title">Registration</h1>
+    <input type="text" class="login-input" name="username" placeholder="Username" required />
+    <input type="password" class="login-input" name="password" placeholder="Password">
+    <input type="text" class="login-input" name="email" placeholder="First name">
+    <input type="text" class="login-input" name="email" placeholder="Last Name">
+    <input type="submit" name="submit" value="Register" class="login-button">
+    <p class="link"><a href="login.php">Click to Login</a></p>
+</form>
 
     <script src="https://kit.fontawesome.com/863e419f08.js" crossorigin="anonymous"></script>
 </body>
 
 </html>
+<script>
+    import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
+
+const auth = getAuth();
+createUserWithEmailAndPassword(auth, email, password)
+  .then((userCredential) => {
+    // Signed in 
+    const user = userCredential.user;
+    // ...
+  })
+  .catch((error) => {
+    const errorCode = error.code;
+    const errorMessage = error.message;
+    // ..
+  });
+</script>

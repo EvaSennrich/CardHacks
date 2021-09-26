@@ -13,14 +13,28 @@
 </head>
 
 <body>
-
-    <div class="formContainer">
-        <h1>Enter Credentials Here:</h1>
-        <input type="email" placeholder="email here" id="email"><br>
-        <input type="password" placeholder="password here" id="password"><br>
-        <button onclick="signIn()" id="signIp">SignIn</button>
-        <i>need to signup? <th><a href="signup.html"><b>Signup</b></a></th></i>
+    <input type="checkbox" id="check" />
+    <label for="check">
+      <i class="fas fa-bars" id="barbtn"></i>
+      <i class="fas fa-times" id="cancel"></i>
+    </label>
+    <div class="sidebar">
+      <h2>Menu</h2>
+      <ul>
+        <li>
+          <a href="../index.html" id="homeBtn"><i class="fas fa-home"></i>Home</a>
+        </li>
+      </ul>
     </div>
+  </header>
+
+    <form class="form" method="post" name="login">
+        <h1 class="login-title">Login</h1>
+        <input type="text" class="login-input" name="username" placeholder="Username" autofocus="true"/>
+        <input type="password" class="login-input" name="password" placeholder="Password"/>
+        <input type="submit" value="Login" name="submit" class="login-button"/>
+        <p class="link"><a href="signup.html">New Registration</a></p>
+  </form>
 
     <script src="https://kit.fontawesome.com/863e419f08.js" crossorigin="anonymous"></script>
 </body>
