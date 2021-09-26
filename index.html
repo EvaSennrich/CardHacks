@@ -1,146 +1,143 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="src/public/css/style.css" />
+    <script src="https://www.gstatic.com/firebase.js/8.2.7/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebase.js/8.2.7/firebase-auth.js"></script>
+    <title>CardHacks</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="src/public/css/style.css">
-  <script src="https://www.gstatic.com/firebase.js/8.2.7/firebase-app.js"></script>
-  <script src="https://www.gstatic.com/firebase.js/8.2.7/firebase-auth.js"></script>
-  <title>CardHacks</title>
-</head>
+  <body>
+    <!-- sidebar -->
+    <header>
+      <input type="checkbox" id="check" />
+      <label for="check">
+        <i class="fas fa-bars" id="barbtn"></i>
+        <i class="fas fa-times" id="cancel"></i>
+      </label>
+      <div class="sidebar">
+        <h2>Menu</h2>
+        <ul>
+          <li>
+            <a href="#" id="homeBtn"><i class="fas fa-home"></i>Home</a>
+          </li>
+          <li>
+            <a href="src\login.html"><i class="fas fa-sign-in-alt"></i>Login</a>
+          </li>
+          <li>
+            <a href="#" id="flashcardBtn"><i class="fas fa-sticky-note"></i>Flashcards</a>
+          </li>
+          <li>
+            <a href="#" id="scoreboardBtn"><i class="fas fa-star"></i>Scoreboard</a>
+          </li>
+          <li>
+            <a href="#"><i class="fas fa-cogs"></i>Settings</a>
+          </li>
+          <li style="text-align: center; margin-top: 5%">
+            <button class="signoutbtn" onclick="signOut()" id="signOut">Sign Out</button>
+          </li>
+        </ul>
+      </div>
+    </header>
 
-<body>
-  <!-- sidebar -->
-  <header>
-    <input type="checkbox" id="check" />
-    <label for="check">
-      <i class="fas fa-bars" id="barbtn"></i>
-      <i class="fas fa-times" id="cancel"></i>
-    </label>
-    <div class="sidebar">
-      <h2>Menu</h2>
-      <ul>
-        <li>
-          <a href="#" id="homeBtn"><i class="fas fa-home"></i>Home</a>
-        </li>
-        <li>
-          <a href="src\login.html"><i class="fas fa-home"></i>Login</a>
-        </li>
-        <li>
-          <a href="#" id="flashcardBtn"><i class="fas fa-sticky-note"></i>Flashcards</a>
-        </li>
-        <li>
-          <a href="#" id="scoreboardBtn"><i class="fas fa-star"></i>Scoreboard</a>
-        </li>
-        <li>
-          <a href="#"><i class="fas fa-cogs"></i>Settings</a>
-        </li>
-        <li style="text-align: center; margin-top: 5%;">
-          <button onclick="signOut()" id="signOut">SignOut</button>
-        </li>
-      </ul>
+    <main>
+      <!-- Home -->
+      <section class="homesection page" id="homesect">
+        <h1>Flashcards</h1>
+        <div class="homeCardContainer">
+          <a href="">
+            <div class="homeCards">
+              <p>Learn Through Flashcards</p>
+            </div>
+          </a>
+          <a href="#">
+            <div class="homeCards">
+              <p>Watch Your Performance On The Scoreboard</p>
+            </div>
+          </a>
+        </div>
+      </section>
+
+      <!-- Flashcards -->
+      <section class="flashcardSection page" id="flashcardSect">
+        <div class="flashcardHeading">
+          <h2>Flashcard Collections</h2>
+          <div class="flashcardBtns">
+            <button id="showCardBox">Create collection</button>
+            <button id="findCollection">Find collection</button>
+          </div>
+        </div>
+        <div class="scoreboard" style="text-align: center">
+          <p>Correct: <a id="correctAnswers">0</a></p>
+          <p>Incorrect: <a id="incorrectAnswers">0</a></p>
+        </div>
+
+        <div class="createCardSection">
+          <h3>Create Flashcard</h3>
+          <div class="createSection">
+            <label for="question">Question</label>
+            <textarea id="question"></textarea>
+            <br />
+            <label for="answer">Answer</label>
+            <textarea id="answer"></textarea>
+          </div>
+          <div class="createBtns">
+            <button id="saveCard">Save</button>
+            <button id="hideCreateBox">Close</button>
+            <button id="saveCollection">Save Collection</button>
+          </div>
+        </div>
+        <div class="flashcardCollection"></div>
+        <div class="flashcardContainer"></div>
+      </section>
+
+      <!-- Scoreboard -->
+      <section class="scoreboardSection page" id="scoreboardSect">
+        <h2>Scoreboard</h2>
+        <table class="scoreTable">
+          <tr>
+            <th>Ranks</th>
+            <th>Name</th>
+            <th>Correct</th>
+            <th>Incorrect</th>
+            <th>No. of cards</th>
+          </tr>
+
+          <tr>
+            <td>Ranks</td>
+            <td>Name</td>
+            <td>Correct</td>
+            <td>Incorrect</td>
+            <td>No. of cards</td>
+          </tr>
+
+          <tr>
+            <td>Ranks</td>
+            <td>Name</td>
+            <td>Correct</td>
+            <td>Incorrect</td>
+            <td>No. of cards</td>
+          </tr>
+
+          <tr>
+            <td>Ranks</td>
+            <td>Name</td>
+            <td>Correct</td>
+            <td>Incorrect</td>
+            <td>No. of cards</td>
+          </tr>
+        </table>
+      </section>
+    </main>
+
+    <div class="footer-container">
+      <footer>Made with <i class="fas fa-heart"></i> by Team CardHacks for ShellHacks</footer>
     </div>
-  </header>
 
-  <main>
-    <!-- Home -->
-    <section class="homesection page" id="homesect">
-      <h1>Hi User!</h1>
-      <div class="homeCardContainer">
-        <a href="">
-          <div class="homeCards">
-            <p>Learn through Flashcards</p>
-          </div>
-        </a>
-        <a href="#">
-          <div class="homeCards">
-            <p>Watch your performance on scoreboard</p>
-          </div>
-        </a>
-      </div>
-    </section>
-
-    <!-- Flashcards -->
-    <section class="flashcardSection page" id="flashcardSect">
-      <div class="flashcardHeading">
-        <h2>Flashcard Collections</h2>
-        <div class="flashcardBtns">
-          <button id="showCardBox">Create collection</button>
-          <button id="findCollection">Find collection</button>
-        </div>
-      </div>
-      <div class="scoreboard" style="text-align: center;">
-        <p>Correct: <a id="correctAnswers">0</a></p>
-        <p>Incorrect: <a id="incorrectAnswers">0</a></p>
-      </div>
-
-      <div class="createCardSection">
-        <h3>Create Flashcard</h3>
-        <div class="createSection">
-          <label for="question">Question</label>
-          <textarea id="question"></textarea>
-          <br>
-          <label for="answer">Answer</label>
-          <textarea id="answer"></textarea>
-        </div>
-        <div class="createBtns">
-          <button id="saveCard">Save</button>
-          <button id="hideCreateBox">Close</button>
-          <button id="saveCollection">Save Collection</button>
-        </div>
-      </div>
-      <div class="flashcardCollection"></div>
-      <div class="flashcardContainer">
-      </div>
-    </section>
-
-    <!-- Scoreboard -->
-    <section class="scoreboardSection page" id="scoreboardSect">
-      <h2>Scoreboard</h2>
-      <table class="scoreTable">
-        <tr>
-          <th>Ranks</th>
-          <th>Name</th>
-          <th>Correct</th>
-          <th>Incorrect</th>
-          <th>No. of cards</th>
-        </tr>
-
-        <tr>
-          <td>Ranks</td>
-          <td>Name</td>
-          <td>Correct</td>
-          <td>Incorrect</td>
-          <td>No. of cards</td>
-        </tr>
-
-        <tr>
-          <td>Ranks</td>
-          <td>Name</td>
-          <td>Correct</td>
-          <td>Incorrect</td>
-          <td>No. of cards</td>
-        </tr>
-
-        <tr>
-          <td>Ranks</td>
-          <td>Name</td>
-          <td>Correct</td>
-          <td>Incorrect</td>
-          <td>No. of cards</td>
-        </tr>
-      </table>
-    </section>
-
-  </main>
-  <footer>
-    <p>Made with <i class="fas fa-heart"></i> by Team CardHacks for ShellHacks</p>
-  </footer>
-
-  <script src="src/public/js/main.js"></script>
-  <script src="https://kit.fontawesome.com/863e419f08.js" crossorigin="anonymous"></script>
-</body>
-
+    <script src="src/public/js/main.js"></script>
+    <script src="https://kit.fontawesome.com/863e419f08.js" crossorigin="anonymous"></script>
+  </body>
 </html>
